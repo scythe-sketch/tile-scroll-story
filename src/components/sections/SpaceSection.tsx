@@ -8,17 +8,17 @@ import tileSpace7 from "@/assets/tile-space-7.jpg";
 const stats = [
   { icon: Sofa, value: "1,200", label: "sq ft open space" },
   { icon: Sun, value: "High", label: "ceilings & natural light" },
-  { icon: Users, value: "45+", label: "seating capacity" },
   { icon: Car, value: "Free", label: "onsite parking" },
+  { icon: Wifi, value: "Fast", label: "free WiFi" },
 ];
 
 const features = [
-  "1 communal table (8-seater)",
-  "3 six-seater tables",
-  "6 four-seater tables", 
-  "6 solo workspots",
-  "Outdoor seating",
   "Floor-to-ceiling windows",
+  "Plug points throughout",
+  "Solo & group seating",
+  "Outdoor terrace",
+  "Padel & tennis views",
+  "Pilates studio next door",
 ];
 
 export const SpaceSection = () => {
@@ -78,7 +78,7 @@ export const SpaceSection = () => {
                   Inside Grip Sports Club
                 </h3>
                 <p className="text-muted-foreground text-lg">
-                  Located in between Padel Tennis, Tennis, and Pilates at <span className="text-primary font-medium">@coreconnextdxb</span>. Watch matches from our glass walls while you work or play — a uniquely energising workspace.
+                  Watch padel and tennis matches from our glass walls and access a renowned pilates studio next door — a uniquely energising environment to work, play, or unwind.
                 </p>
                 <div className="grid grid-cols-2 gap-3">
                   {features.map((feature) => (

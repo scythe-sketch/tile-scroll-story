@@ -50,6 +50,10 @@ export const GamesSection = () => {
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Strategy, party games, word games, co-op, kids & family, card games, classics, dice games, tile games, two-player, and social deduction — handpicked for every mood.
             </p>
+            <div className="mt-6 inline-flex items-center gap-2 px-6 py-3 bg-primary/10 rounded-full">
+              <span className="text-primary font-bold text-lg">AED 30</span>
+              <span className="text-muted-foreground">unlimited gaming</span>
+            </div>
           </ScrollReveal>
         </div>
 

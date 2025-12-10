@@ -39,12 +39,6 @@ export const Footer = () => {
                   Jumeirah Islands / JLT Border
                 </p>
                 <p className="text-primary-foreground/70">Dubai, UAE</p>
-                <p className="text-primary-foreground/60 text-sm mt-3">
-                  Between Padel Tennis, Tennis & Pilates
-                </p>
-                <p className="text-primary-foreground/60 text-sm">
-                  <span className="text-matcha">@coreconnextdxb</span>
-                </p>
                 <p className="text-matcha font-medium mt-3">Free Onsite Parking</p>
                 <p className="text-primary-foreground/60 text-sm">
                   5–7 min walk from JLT Metro (DMCC)
@@ -53,14 +47,14 @@ export const Footer = () => {
               {/* Google Maps Embed */}
               <div className="mt-4 rounded-xl overflow-hidden h-40">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.1234567890123!2d55.12345678901234!3d25.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzI0LjQiTiA1NcKwMDcnMjQuNCJF!5e0!3m2!1sen!2sae!4v1234567890123"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.5!2d55.1444!3d25.0742!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6c5cfd4b1e31%3A0x6c8b77b8d6c9c8e5!2sTile%20Board%20Game%20Cafe!5e0!3m2!1sen!2sae!4v1702200000000!5m2!1sen!2sae"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="TILE Location"
+                  title="TILE Board Game Cafe Location"
                   className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
                 />
               </div>
@@ -81,9 +75,6 @@ export const Footer = () => {
                   <span className="text-primary-foreground/70">Daily</span>
                   <span className="font-display text-lg font-bold">08:00 – 24:00</span>
                 </div>
-                <p className="text-matcha text-sm">
-                  Morning quiet hours: 08:00 – 12:00
-                </p>
               </div>
             </div>
           </ScrollReveal>
@@ -99,7 +90,7 @@ export const Footer = () => {
               </div>
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/971000000000"
+                  href="https://wa.me/971525789699"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-matcha transition-colors group"
@@ -107,16 +98,16 @@ export const Footer = () => {
                   <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-matcha/20 transition-colors">
                     <Phone size={18} />
                   </div>
-                  <span>WhatsApp</span>
+                  <span>+971 52 578 9699</span>
                 </a>
                 <a
-                  href="mailto:hello@tiledubai.com"
+                  href="mailto:info@tiledubai.com"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-matcha transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-matcha/20 transition-colors">
                     <Mail size={18} />
                   </div>
-                  <span>hello@tiledubai.com</span>
+                  <span>info@tiledubai.com</span>
                 </a>
                 <a
                   href="https://instagram.com/tiledubai"
