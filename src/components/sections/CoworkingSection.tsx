@@ -9,7 +9,6 @@ const features = [
   { icon: Plug, label: "Outlets Everywhere" },
   { icon: Sun, label: "Natural Light" },
   { icon: Car, label: "Free Parking" },
-  { icon: Clock, label: "Quiet Hours" },
   { icon: Coffee, label: "Great Coffee" },
 ];
 
@@ -52,14 +51,11 @@ export const CoworkingSection = () => {
               </div>
 
               <div className="space-y-4">
-                <p className="text-muted-foreground text-sm">
-                  <span className="font-medium text-foreground">Morning quiet hours:</span> 08:00 – 12:00
-                </p>
                 <Button
                   variant="sage"
                   size="lg"
                   onClick={() =>
-                    window.open("https://wa.me/971000000000", "_blank")
+                    window.open("https://wa.me/971525789699", "_blank")
                   }
                 >
                   Book a Desk
