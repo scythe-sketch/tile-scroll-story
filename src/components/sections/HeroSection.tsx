@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-cafe.jpg";
+import heroImage from "@/assets/tile-space-1.jpg";
 
 export const HeroSection = () => {
   const scrollToAbout = () => {
@@ -34,13 +34,22 @@ export const HeroSection = () => {
           transition={{ duration: 1, delay: 0.3 }}
           className="max-w-4xl mx-auto"
         >
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="text-sm md:text-base text-primary-foreground/80 uppercase tracking-widest mb-4"
+          >
+            Dubai's Community Board Game Café
+          </motion.p>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-medium leading-tight mb-6"
+            className="font-display text-4xl md:text-6xl lg:text-7xl text-primary-foreground font-bold leading-tight mb-6"
           >
-            Where Every Move Finds Its Missing Piece
+            The Missing Piece.
           </motion.h1>
 
           <motion.p
@@ -49,7 +58,7 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, delay: 0.7 }}
             className="text-lg md:text-xl text-primary-foreground/90 mb-10 max-w-2xl mx-auto font-light"
           >
-            Board games, specialty coffee, and community.
+            Board games, specialty coffee, and community — all under one roof.
           </motion.p>
 
           <motion.div

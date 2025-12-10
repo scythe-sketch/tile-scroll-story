@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["Playfair Display", "Georgia", "serif"],
+        sans: ["Public Sans", "system-ui", "sans-serif"],
+        display: ["League Spartan", "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

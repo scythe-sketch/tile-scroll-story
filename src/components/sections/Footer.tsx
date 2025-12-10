@@ -1,5 +1,6 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { MapPin, Clock, Phone, Mail, Instagram } from "lucide-react";
+import tileLogo from "@/assets/tile-logo.png";
 
 const quickLinks = [
   { href: "#about", label: "About" },
@@ -33,9 +34,21 @@ export const Footer = () => {
                 </span>
               </div>
               <div className="space-y-2">
-                <p className="font-display text-xl">Grip Sports Club</p>
+                <p className="font-display text-xl font-bold">Inside Grip Sports Club</p>
+                <p className="text-primary-foreground/70">
+                  Jumeirah Islands / JLT Border
+                </p>
                 <p className="text-primary-foreground/70">Dubai, UAE</p>
-                <p className="text-matcha font-medium">Free Onsite Parking</p>
+                <p className="text-primary-foreground/60 text-sm mt-3">
+                  Between Padel Tennis, Tennis & Pilates
+                </p>
+                <p className="text-primary-foreground/60 text-sm">
+                  <span className="text-matcha">@coreconnextdxb</span>
+                </p>
+                <p className="text-matcha font-medium mt-3">Free Onsite Parking</p>
+                <p className="text-primary-foreground/60 text-sm">
+                  5–7 min walk from JLT Metro (DMCC)
+                </p>
               </div>
               {/* Google Maps Embed */}
               <div className="mt-4 rounded-xl overflow-hidden h-40">
@@ -66,7 +79,7 @@ export const Footer = () => {
               <div className="space-y-3">
                 <div className="flex justify-between items-center py-2 border-b border-primary-foreground/10">
                   <span className="text-primary-foreground/70">Daily</span>
-                  <span className="font-display text-lg">08:00 – 24:00</span>
+                  <span className="font-display text-lg font-bold">08:00 – 24:00</span>
                 </div>
                 <p className="text-matcha text-sm">
                   Morning quiet hours: 08:00 – 12:00
@@ -97,16 +110,16 @@ export const Footer = () => {
                   <span>WhatsApp</span>
                 </a>
                 <a
-                  href="mailto:hello@tilecafe.ae"
+                  href="mailto:hello@tiledubai.com"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-matcha transition-colors group"
                 >
                   <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-matcha/20 transition-colors">
                     <Mail size={18} />
                   </div>
-                  <span>hello@tilecafe.ae</span>
+                  <span>hello@tiledubai.com</span>
                 </a>
                 <a
-                  href="https://instagram.com/tilecafe"
+                  href="https://instagram.com/tiledubai"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-primary-foreground/80 hover:text-matcha transition-colors group"
@@ -114,7 +127,7 @@ export const Footer = () => {
                   <div className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center group-hover:bg-matcha/20 transition-colors">
                     <Instagram size={18} />
                   </div>
-                  <span>@tilecafe</span>
+                  <span>@tiledubai</span>
                 </a>
               </div>
             </div>
@@ -147,8 +160,16 @@ export const Footer = () => {
         <div className="container mx-auto px-6 py-12">
           <ScrollReveal>
             <div className="text-center">
-              <p className="font-display text-2xl md:text-3xl lg:text-4xl text-primary-foreground/90 italic">
+              <img 
+                src={tileLogo} 
+                alt="TILE" 
+                className="h-12 w-auto mx-auto mb-6 brightness-0 invert opacity-80"
+              />
+              <p className="font-display text-2xl md:text-3xl lg:text-4xl text-primary-foreground/90 font-bold">
                 "Find Your Missing Piece at TILE."
+              </p>
+              <p className="text-primary-foreground/50 text-sm mt-4 max-w-md mx-auto">
+                A community you can piece together. Where strangers become teammates.
               </p>
               <div className="mt-8 flex items-center justify-center gap-4 text-primary-foreground/50 text-sm">
                 <span>© 2024 TILE</span>

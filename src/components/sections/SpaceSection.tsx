@@ -1,15 +1,24 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { Sun, Users, Sofa, Trees } from "lucide-react";
-import heroCafe from "@/assets/hero-cafe.jpg";
-import coworkingSpace from "@/assets/coworking-space.jpg";
-import gameShelves from "@/assets/game-shelves.jpg";
+import { Sun, Users, Sofa, Car, Wifi, Plug } from "lucide-react";
+import tileSpace5 from "@/assets/tile-space-5.jpg";
+import tileSpace6 from "@/assets/tile-space-6.jpg";
+import tileSpace7 from "@/assets/tile-space-7.jpg";
 
 const stats = [
-  { icon: Sofa, value: "1,200", label: "sq ft of open space" },
+  { icon: Sofa, value: "1,200", label: "sq ft open space" },
   { icon: Sun, value: "High", label: "ceilings & natural light" },
-  { icon: Users, value: "Communal", label: "tables & solo desks" },
-  { icon: Trees, value: "Outdoor", label: "seating available" },
+  { icon: Users, value: "45+", label: "seating capacity" },
+  { icon: Car, value: "Free", label: "onsite parking" },
+];
+
+const features = [
+  "1 communal table (8-seater)",
+  "3 six-seater tables",
+  "6 four-seater tables", 
+  "6 solo workspots",
+  "Outdoor seating",
+  "Floor-to-ceiling windows",
 ];
 
 export const SpaceSection = () => {
@@ -17,7 +26,7 @@ export const SpaceSection = () => {
     <section id="space" className="relative">
       {/* Parallax Header */}
       <ParallaxSection
-        backgroundImage={coworkingSpace}
+        backgroundImage={tileSpace5}
         overlayOpacity={0.5}
         className="py-32 md:py-48"
       >
@@ -26,13 +35,11 @@ export const SpaceSection = () => {
             <span className="text-sm font-medium text-primary-foreground/80 uppercase tracking-widest">
               Our Space
             </span>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-4 mb-6">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-primary-foreground mt-4 mb-6 font-bold">
               Designed for Connection
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              An inviting atmosphere where natural light floods in, high
-              ceilings create openness, and every corner invites you to stay
-              awhile.
+              A bright, spacious café with high ceilings, natural light, dedicated seating, and a calm creative atmosphere — perfect for solo work, group projects, or meetings.
             </p>
           </ScrollReveal>
         </div>
@@ -48,7 +55,7 @@ export const SpaceSection = () => {
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-primary/10 text-primary mb-4">
                     <stat.icon size={28} />
                   </div>
-                  <div className="font-display text-2xl md:text-3xl text-foreground font-medium">
+                  <div className="font-display text-2xl md:text-3xl text-foreground font-bold">
                     {stat.value}
                   </div>
                   <div className="text-muted-foreground text-sm mt-1">
@@ -61,25 +68,68 @@ export const SpaceSection = () => {
         </div>
       </div>
 
-      {/* Gallery Grid */}
+      {/* Features + Gallery */}
       <div className="bg-background py-24">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
             <ScrollReveal direction="left">
+              <div className="space-y-6">
+                <h3 className="font-display text-3xl md:text-4xl text-foreground font-bold">
+                  Inside Grip Sports Club
+                </h3>
+                <p className="text-muted-foreground text-lg">
+                  Located in between Padel Tennis, Tennis, and Pilates at <span className="text-primary font-medium">@coreconnextdxb</span>. Watch matches from our glass walls while you work or play — a uniquely energising workspace.
+                </p>
+                <div className="grid grid-cols-2 gap-3">
+                  {features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2 text-foreground">
+                      <div className="w-2 h-2 rounded-full bg-primary" />
+                      <span className="text-sm">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+                <div className="flex gap-4 pt-4">
+                  <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
+                    <Wifi size={18} className="text-primary" />
+                    <span className="text-sm font-medium">Free WiFi</span>
+                  </div>
+                  <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
+                    <Plug size={18} className="text-primary" />
+                    <span className="text-sm font-medium">Outlets Everywhere</span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
               <img
-                src={heroCafe}
-                alt="TILE Café seating area"
+                src={tileSpace6}
+                alt="TILE café space"
                 className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium"
                 loading="lazy"
               />
             </ScrollReveal>
-            <ScrollReveal direction="right" delay={0.2}>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <ScrollReveal direction="left">
               <img
-                src={gameShelves}
-                alt="Board game collection at TILE"
-                className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium"
+                src={tileSpace7}
+                alt="TILE café seating"
+                className="w-full h-64 md:h-80 object-cover rounded-3xl shadow-medium"
                 loading="lazy"
               />
+            </ScrollReveal>
+            <ScrollReveal direction="right" delay={0.2}>
+              <div className="h-64 md:h-80 bg-primary rounded-3xl flex items-center justify-center p-8">
+                <div className="text-center text-primary-foreground">
+                  <p className="font-display text-2xl md:text-3xl font-bold mb-2">
+                    "Welcome to your green zone."
+                  </p>
+                  <p className="text-primary-foreground/80">
+                    Green flags only. No toxic circles — just chill grids.
+                  </p>
+                </div>
+              </div>
             </ScrollReveal>
           </div>
         </div>

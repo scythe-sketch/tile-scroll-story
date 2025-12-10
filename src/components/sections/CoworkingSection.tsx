@@ -1,14 +1,16 @@
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Wifi, Plug, Sun, Car } from "lucide-react";
-import coworkingSpace from "@/assets/coworking-space.jpg";
+import { Wifi, Plug, Sun, Car, Clock, Coffee } from "lucide-react";
+import tileSpace3 from "@/assets/tile-space-3.jpg";
 
 const features = [
-  { icon: Wifi, label: "Fast WiFi" },
+  { icon: Wifi, label: "High-Speed WiFi" },
   { icon: Plug, label: "Outlets Everywhere" },
   { icon: Sun, label: "Natural Light" },
   { icon: Car, label: "Free Parking" },
+  { icon: Clock, label: "Quiet Hours" },
+  { icon: Coffee, label: "Great Coffee" },
 ];
 
 export const CoworkingSection = () => {
@@ -23,18 +25,16 @@ export const CoworkingSection = () => {
                 <span className="text-sm font-medium text-primary uppercase tracking-widest">
                   Work From TILE
                 </span>
-                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6">
+                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6 font-bold">
                   Your New Favorite Workspace
                 </h2>
                 <p className="text-muted-foreground text-lg leading-relaxed">
-                  Mornings at TILE are for focus. Enjoy the calm atmosphere, great
-                  coffee, and inspiring environment. Stay productive while
-                  surrounded by creativity.
+                  Mornings at TILE are for focus. Enjoy the calm atmosphere, great coffee, and inspiring environment. Stay productive while surrounded by creativity — with views of padel and tennis matches through our glass walls.
                 </p>
               </div>
 
               {/* Features Grid */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                 {features.map((feature, index) => (
                   <motion.div
                     key={feature.label}
@@ -44,22 +44,27 @@ export const CoworkingSection = () => {
                     <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary">
                       <feature.icon size={20} />
                     </div>
-                    <span className="font-medium text-foreground">
+                    <span className="font-medium text-foreground text-sm">
                       {feature.label}
                     </span>
                   </motion.div>
                 ))}
               </div>
 
-              <Button
-                variant="sage"
-                size="lg"
-                onClick={() =>
-                  window.open("https://wa.me/971000000000", "_blank")
-                }
-              >
-                Book a Desk
-              </Button>
+              <div className="space-y-4">
+                <p className="text-muted-foreground text-sm">
+                  <span className="font-medium text-foreground">Morning quiet hours:</span> 08:00 – 12:00
+                </p>
+                <Button
+                  variant="sage"
+                  size="lg"
+                  onClick={() =>
+                    window.open("https://wa.me/971000000000", "_blank")
+                  }
+                >
+                  Book a Desk
+                </Button>
+              </div>
             </div>
           </ScrollReveal>
 
@@ -67,7 +72,7 @@ export const CoworkingSection = () => {
           <ScrollReveal direction="right" delay={0.2}>
             <div className="relative">
               <img
-                src={coworkingSpace}
+                src={tileSpace3}
                 alt="Coworking at TILE"
                 className="w-full h-[500px] object-cover rounded-3xl shadow-medium"
                 loading="lazy"
@@ -78,7 +83,7 @@ export const CoworkingSection = () => {
                 className="absolute -bottom-6 -left-6 bg-card p-6 rounded-2xl shadow-medium"
               >
                 <div className="text-center">
-                  <div className="font-display text-3xl font-medium text-primary">
+                  <div className="font-display text-3xl font-bold text-primary">
                     08:00
                   </div>
                   <div className="text-sm text-muted-foreground">
