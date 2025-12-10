@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
 
 @layer base {
   :root {
-    /* TILE Brand Colors - Warm Matcha/Sage Palette */
+    /* TILE Brand Colors - From Brand Book */
     --background: 45 30% 97%;
     --foreground: 150 15% 15%;
 
@@ -16,39 +16,39 @@
     --popover: 45 30% 97%;
     --popover-foreground: 150 15% 15%;
 
-    /* Primary - Deep Sage Green */
-    --primary: 145 25% 35%;
+    /* Primary - Main Tile Green #799A69 */
+    --primary: 101 22% 51%;
     --primary-foreground: 45 30% 97%;
 
-    /* Secondary - Light Sage */
-    --secondary: 140 20% 90%;
+    /* Secondary - Light Sage #ACC798 */
+    --secondary: 100 30% 69%;
     --secondary-foreground: 150 15% 20%;
 
     /* Muted - Warm Gray */
     --muted: 40 15% 92%;
     --muted-foreground: 150 10% 45%;
 
-    /* Accent - Deep Forest Green */
-    --accent: 155 35% 25%;
+    /* Accent - Deep Green #618861 */
+    --accent: 120 19% 45%;
     --accent-foreground: 45 30% 97%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 140 15% 85%;
-    --input: 140 15% 85%;
-    --ring: 145 25% 35%;
+    --border: 100 15% 85%;
+    --input: 100 15% 85%;
+    --ring: 101 22% 51%;
 
     --radius: 1rem;
 
     /* Custom TILE tokens */
     --cream: 45 30% 97%;
     --cream-dark: 40 20% 92%;
-    --sage: 145 25% 35%;
-    --sage-light: 140 20% 90%;
-    --sage-muted: 140 15% 75%;
-    --forest: 155 35% 25%;
-    --matcha: 135 30% 45%;
+    --sage: 101 22% 51%;
+    --sage-light: 100 30% 90%;
+    --sage-muted: 100 15% 75%;
+    --forest: 120 19% 45%;
+    --matcha: 100 30% 69%;
     --warm-brown: 30 20% 25%;
 
     /* Gradients */
@@ -82,16 +82,16 @@
     --popover: 150 15% 8%;
     --popover-foreground: 45 20% 92%;
 
-    --primary: 140 30% 55%;
+    --primary: 100 30% 55%;
     --primary-foreground: 150 15% 8%;
 
     --secondary: 150 15% 18%;
     --secondary-foreground: 45 20% 92%;
 
     --muted: 150 12% 18%;
-    --muted-foreground: 140 10% 60%;
+    --muted-foreground: 100 10% 60%;
 
-    --accent: 135 35% 45%;
+    --accent: 100 35% 45%;
     --accent-foreground: 150 15% 8%;
 
     --destructive: 0 62.8% 30.6%;
@@ -99,15 +99,15 @@
 
     --border: 150 12% 20%;
     --input: 150 12% 20%;
-    --ring: 140 30% 55%;
+    --ring: 100 30% 55%;
 
     --cream: 150 15% 8%;
     --cream-dark: 150 12% 12%;
-    --sage: 140 30% 55%;
+    --sage: 100 30% 55%;
     --sage-light: 150 15% 18%;
-    --sage-muted: 140 15% 35%;
-    --forest: 135 35% 45%;
-    --matcha: 135 35% 55%;
+    --sage-muted: 100 15% 35%;
+    --forest: 100 35% 45%;
+    --matcha: 100 35% 55%;
     --warm-brown: 30 15% 75%;
 
     --sidebar-background: 240 5.9% 10%;

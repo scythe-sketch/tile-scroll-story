@@ -1,7 +1,7 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
-import gamesTable from "@/assets/games-table.jpg";
-import coffeeDrinks from "@/assets/coffee-drinks.jpg";
-import gameNight from "@/assets/game-night.jpg";
+import tileSpace2 from "@/assets/tile-space-2.jpg";
+import tileSpace3 from "@/assets/tile-space-3.jpg";
+import tileSpace4 from "@/assets/tile-space-4.jpg";
 
 export const AboutSection = () => {
   return (
@@ -12,20 +12,20 @@ export const AboutSection = () => {
           <ScrollReveal direction="left">
             <div className="space-y-6">
               <span className="text-sm font-medium text-primary uppercase tracking-widest">
-                Welcome to
+                Welcome to TILE
               </span>
-              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight">
-                Dubai's First Board-Game Café
+              <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground leading-tight font-bold">
+                Where Strangers Become Teammates
               </h2>
               <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
                 <p>
-                  TILE is built around community, comfort, and creativity. A
-                  place where strangers become friends over shared strategies,
-                  where the aroma of specialty coffee mingles with laughter.
+                  Tile is a design-forward, community-driven board game café built around the idea of connection. Inspired by the grid of tiles — small pieces that form something greater — Tile brings together people, coffee, and creativity in one warm, playful space.
                 </p>
                 <p>
-                  Whether you're here to work, play, connect, or simply unwind —
-                  you've found your missing piece.
+                  Here, every moment fits into the bigger picture: a sip of specialty coffee, a move in your favourite game, a conversation that becomes a memory.
+                </p>
+                <p className="text-primary font-medium">
+                  A place to work, play, connect, and unwind — piece by piece.
                 </p>
               </div>
             </div>
@@ -36,8 +36,8 @@ export const AboutSection = () => {
             <ScrollReveal direction="right" delay={0.2}>
               <div className="relative">
                 <img
-                  src={gamesTable}
-                  alt="Board games and coffee at TILE"
+                  src={tileSpace2}
+                  alt="TILE café interior"
                   className="w-full h-80 object-cover rounded-3xl shadow-medium"
                   loading="lazy"
                 />
@@ -47,14 +47,14 @@ export const AboutSection = () => {
             <ScrollReveal direction="up" delay={0.4}>
               <div className="flex gap-4 mt-4">
                 <img
-                  src={coffeeDrinks}
-                  alt="Specialty drinks at TILE"
+                  src={tileSpace3}
+                  alt="Board games at TILE"
                   className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift"
                   loading="lazy"
                 />
                 <img
-                  src={gameNight}
-                  alt="Game night at TILE"
+                  src={tileSpace4}
+                  alt="Community at TILE"
                   className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift"
                   loading="lazy"
                 />

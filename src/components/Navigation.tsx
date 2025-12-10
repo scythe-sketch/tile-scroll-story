@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import tileLogo from "@/assets/tile-logo.png";
 
 const navLinks = [
   { href: "#about", label: "About" },
@@ -47,11 +48,15 @@ export const Navigation = () => {
         <div className="container mx-auto px-6 flex items-center justify-between">
           <a
             href="#"
-            className={`font-display text-2xl md:text-3xl font-semibold tracking-wide transition-colors ${
-              isScrolled ? "text-foreground" : "text-primary-foreground"
-            }`}
+            className="flex items-center"
           >
-            TILE
+            <img 
+              src={tileLogo} 
+              alt="TILE" 
+              className={`h-8 md:h-10 w-auto transition-all ${
+                isScrolled ? "" : "brightness-0 invert"
+              }`}
+            />
           </a>
 
           {/* Desktop Navigation */}
@@ -84,7 +89,7 @@ export const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden p-2 text-foreground"
+            className={`md:hidden p-2 ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}
             aria-label="Toggle menu"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}

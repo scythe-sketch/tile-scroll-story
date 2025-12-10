@@ -1,33 +1,33 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Users, Clock, Puzzle, Gamepad2 } from "lucide-react";
+import { Dice1, Dice2, Dice3, Dice4, Dice5, Dice6, Users, Clock, Puzzle, Gamepad2, Brain, Heart } from "lucide-react";
 import gameShelves from "@/assets/game-shelves.jpg";
 
 const gameCategories = [
   {
     name: "Strategy",
-    icon: Puzzle,
+    icon: Brain,
     description: "Deep tactical games for the planners",
-    games: ["Catan", "Ticket to Ride", "Wingspan", "Azul"],
+    games: ["Catan", "Ticket to Ride", "Splendor", "Azul", "Pandemic"],
   },
   {
     name: "Party",
     icon: Users,
     description: "Get the whole group laughing",
-    games: ["Codenames", "Dixit", "Just One", "Wavelength"],
+    games: ["Codenames", "Dixit", "Exploding Kittens", "Werewolf", "The Mind"],
   },
   {
     name: "Classic",
-    icon: Dice1,
+    icon: Puzzle,
     description: "Timeless favorites for all ages",
-    games: ["Chess", "Backgammon", "Scrabble", "Monopoly"],
+    games: ["Chess", "Backgammon", "Scrabble", "Carrom", "Rummikub"],
   },
   {
-    name: "Quick Play",
-    icon: Clock,
-    description: "Perfect for a coffee break",
-    games: ["Uno", "Sushi Go!", "Love Letter", "Coup"],
+    name: "Two-Player",
+    icon: Heart,
+    description: "Perfect for date nights",
+    games: ["Patchwork", "Sequence", "Blokus", "Playing Cards", "Uno"],
   },
 ];
 
@@ -44,12 +44,11 @@ export const GamesSection = () => {
             <span className="text-sm font-medium text-primary uppercase tracking-widest">
               Our Collection
             </span>
-            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6">
+            <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-foreground mt-4 mb-6 font-bold">
               200+ Games. Infinite Fun.
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Strategy, party games, classics, family games — handpicked for
-              every mood and moment.
+              Strategy, party games, word games, co-op, kids & family, card games, classics, dice games, tile games, two-player, and social deduction — handpicked for every mood.
             </p>
           </ScrollReveal>
         </div>
@@ -108,7 +107,7 @@ export const GamesSection = () => {
                           : "text-primary"
                       }`}
                     />
-                    <div className="font-display text-lg font-medium">
+                    <div className="font-display text-lg font-bold">
                       {category.name}
                     </div>
                     <div
@@ -134,7 +133,7 @@ export const GamesSection = () => {
                   transition={{ duration: 0.3 }}
                   className="bg-card p-6 rounded-2xl"
                 >
-                  <h3 className="font-display text-lg font-medium mb-4 flex items-center gap-2">
+                  <h3 className="font-display text-lg font-bold mb-4 flex items-center gap-2">
                     <Gamepad2 className="w-5 h-5 text-primary" />
                     Featured {gameCategories[activeCategory].name} Games
                   </h3>
@@ -151,6 +150,9 @@ export const GamesSection = () => {
                       +50 more
                     </span>
                   </div>
+                  <p className="text-muted-foreground text-sm mt-4">
+                    Full library available at the café.
+                  </p>
                 </motion.div>
               </AnimatePresence>
             </div>
