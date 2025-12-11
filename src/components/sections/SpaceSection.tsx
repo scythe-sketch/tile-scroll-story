@@ -1,6 +1,6 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { Sun, Users, Sofa, Car, Wifi, Plug } from "lucide-react";
+import { Users, Sofa, Car, Zap, Smile } from "lucide-react";
 import tileSpace5 from "@/assets/tile-space-5.jpg";
 import tileSpace6 from "@/assets/tile-space-6.jpg";
 import tileSpace7 from "@/assets/tile-space-7.jpg";
@@ -73,17 +73,18 @@ export const SpaceSection = () => {
                 <div className="grid grid-cols-2 gap-3">
                   {features.map(feature => <div key={feature} className="flex items-center gap-2 text-foreground">
                       <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-sm">{feature}</span>
+                      
                     </div>)}
                 </div>
                 <div className="flex gap-4 pt-4">
                   <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
-                    <Wifi size={18} className="text-primary" />
-                    <span className="text-sm font-medium">Free WiFi</span>
+                    <Zap size={18} className="text-primary" />
+                    <span className="text-sm font-medium">Energising Atmosphere</span>
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
-                    <Plug size={18} className="text-primary" />
-                    <span className="text-sm font-medium">Outlets Everywhere</span>
+                    <Smile size={18} className="text-primary" />
+                    <span className="text-sm font-medium">
+                  </span>
                   </div>
                 </div>
               </div>
@@ -101,7 +102,7 @@ export const SpaceSection = () => {
               <div className="h-64 md:h-80 bg-primary rounded-3xl flex items-center justify-center p-8">
                 <div className="text-center text-primary-foreground">
                   <p className="font-display text-2xl md:text-3xl font-bold mb-2">"Welcome to your green zone."</p>
-                  <p className="text-primary-foreground/80">Fresh dishes, specialty coffee, energising views — no noise, just good vibes and good fuel.</p>
+                  <p className="text-primary-foreground/80">Fresh dishes, specialty coffee, energising views - no noise, just good vibes and good fuel.</p>
                 </div>
               </div>
             </ScrollReveal>
