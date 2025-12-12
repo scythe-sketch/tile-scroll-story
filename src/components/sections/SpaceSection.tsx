@@ -1,9 +1,10 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { Sofa, Sun, Car, Wifi, Zap, Smile } from "lucide-react";
+import { Sofa, Sun, Car, Wifi, Eye, Heart, Leaf, Coffee, Laptop, Dices } from "lucide-react";
 import tileSpace5 from "@/assets/tile-space-5.jpg";
 import tileSpace6 from "@/assets/tile-space-6.jpg";
 import tileSpace7 from "@/assets/tile-space-7.jpg";
+
 const stats = [{
   icon: Sofa,
   value: "1,200",
@@ -21,7 +22,15 @@ const stats = [{
   value: "Fast",
   label: "free WiFi"
 }];
-const features = ["Floor-to-ceiling windows", "Plug points throughout", "Solo & group seating", "Outdoor terrace", "Padel & tennis views", "Pilates studio next door"];
+
+const highlights = [
+  { icon: Eye, label: "Padel and Tennis Views" },
+  { icon: Heart, label: "Next-Door Pilates Energy" },
+  { icon: Leaf, label: "Fresh, Ingredient-Led Food" },
+  { icon: Coffee, label: "Specialty Coffee Culture" },
+  { icon: Laptop, label: "Cowork-Friendly Space" },
+  { icon: Dices, label: "Board Games and Good Times" },
+];
 export const SpaceSection = () => {
   return <section id="space" className="relative">
       {/* Parallax Header */}
@@ -70,22 +79,13 @@ export const SpaceSection = () => {
               <div className="space-y-6">
                 <h3 className="font-display text-3xl md:text-4xl text-foreground font-bold">Inside TILE Café at Grip Sports Club</h3>
                 <p className="text-muted-foreground text-lg">Work, play, and refuel in Dubai’s most energising corner. Watch padel and tennis matches through our floor-to-ceiling windows, soak in the atmosphere of the Pilates studio next door, and enjoy TILE’s fresh, specialty-ingredient menu crafted for focus and feel-good moments.</p>
-                <div className="grid grid-cols-2 gap-3">
-                  {features.map(feature => <div key={feature} className="flex items-center gap-2 text-foreground">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      
-                    </div>)}
-                </div>
-                <div className="flex gap-4 pt-4">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
-                    <Zap size={18} className="text-primary" />
-                    <span className="text-sm font-medium">Energising Atmosphere</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-card rounded-xl">
-                    <Smile size={18} className="text-primary" />
-                    <span className="text-sm font-medium">
-                  </span>
-                  </div>
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
+                  {highlights.map((item) => (
+                    <div key={item.label} className="flex items-center gap-2 px-4 py-3 bg-card rounded-xl">
+                      <item.icon size={18} className="text-primary flex-shrink-0" />
+                      <span className="text-sm font-medium">{item.label}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </ScrollReveal>
