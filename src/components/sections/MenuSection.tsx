@@ -174,8 +174,7 @@ export const MenuSection = () => {
           }}>
               <img src={menuImages[activeTab]} alt={`${activeTab} at TILE`} className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" />
               <div className="mt-6 p-6 bg-card rounded-2xl">
-                <p className="text-muted-foreground text-base text-center font-bold">Good ingredients, good coffee, good fuel. Simple things done well. ​<span className="font-medium text-primary">Cover charge:</span> ​
-                </p>
+                <p className="text-muted-foreground text-base text-center font-bold">Good ingredients, good coffee, good fuel. Simple things done well.</p>
               </div>
             </motion.div>
           </AnimatePresence>
