@@ -95,7 +95,7 @@ export const SpaceSection = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
-              <img alt="TILE café space" className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/3c15bcb7-e495-4713-8ecc-6d86a452a863.png" />
+              <img alt="TILE café space" className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/99a2f140-3619-4c6a-a4a5-1043d1c9bc0e.jpg" />
             </ScrollReveal>
           </div>
           
