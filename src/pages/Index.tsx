@@ -18,7 +18,7 @@ const Index = () => {
       <MenuSection />
       <EventsSection />
       <CoworkingSection />
-      <InstagramSection className="bg-accent" />
+      
       <Footer />
     </main>;
 };
