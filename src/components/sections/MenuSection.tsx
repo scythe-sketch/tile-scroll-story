@@ -2,9 +2,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Coffee, UtensilsCrossed, Cake } from "lucide-react";
-import coffeeDrinks from "@/assets/coffee-drinks.jpg";
-import foodPlates from "@/assets/food-plates.jpg";
-import foodGamesTable from "@/assets/food-games-table.jpg";
+import menuBreakfast from "@/assets/food-games-table.jpg";
+import menuMains from "@/assets/menu-mains.jpg";
+import menuDrinks from "@/assets/menu-drinks.jpg";
+import menuDesserts from "@/assets/menu-desserts.jpg";
+
+const menuImages: Record<MenuTab, string> = {
+  breakfast: menuBreakfast,
+  mains: menuMains,
+  drinks: menuDrinks,
+  desserts: menuDesserts,
+};
 const menuTabs = [{
   id: "breakfast",
   label: "All-Day Breakfast",
@@ -164,7 +172,7 @@ export const MenuSection = () => {
           }} transition={{
             duration: 0.4
           }}>
-              <img src={foodGamesTable} alt={`${activeTab} at TILE`} className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" />
+              <img src={menuImages[activeTab]} alt={`${activeTab} at TILE`} className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" />
               <div className="mt-6 p-6 bg-card rounded-2xl">
                 <p className="text-muted-foreground text-base text-center font-bold">Good ingredients, good coffee, good fuel. Simple things done well. ​<span className="font-medium text-primary">Cover charge:</span> ​
                 </p>
