@@ -90,19 +90,19 @@ export const SpaceSection = () => {
               </div>
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
-              <img alt="TILE café space" className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/3fdbafca-3c0b-416b-9bda-e966cbb633c4.jpg" />
+              <img alt="TILE café space" className="w-full h-80 md:h-96 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/3c15bcb7-e495-4713-8ecc-6d86a452a863.png" />
             </ScrollReveal>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
             <ScrollReveal direction="left">
-              <img alt="TILE café seating" className="w-full h-64 md:h-80 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/5b12e866-3658-42fa-bdec-7582ba986201.jpg" />
+              <img alt="TILE café seating" className="w-full h-64 md:h-80 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/97d58693-df1b-4aae-a815-a39f068fd6f3.jpg" />
             </ScrollReveal>
             <ScrollReveal direction="right" delay={0.2}>
               <div className="h-64 md:h-80 bg-primary rounded-3xl flex items-center justify-center p-8">
                 <div className="text-center text-primary-foreground">
-                  <p className="font-display text-2xl md:text-3xl font-bold mb-2">"Welcome to your green zone."</p>
-                  <p className="text-primary-foreground/80">Fresh dishes, specialty coffee, energising views - no noise, just good vibes and good fuel.</p>
+                  <p className="font-display text-2xl md:text-3xl font-bold mb-2">"Where good energy gathers."</p>
+                  <p className="text-primary-foreground/80">Fresh ingredients, energising views, and a space built around movement and good vibes.</p>
                 </div>
               </div>
             </ScrollReveal>
