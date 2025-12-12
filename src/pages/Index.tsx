@@ -6,6 +6,7 @@ import { GamesSection } from "@/components/sections/GamesSection";
 import { MenuSection } from "@/components/sections/MenuSection";
 import { EventsSection } from "@/components/sections/EventsSection";
 import { CoworkingSection } from "@/components/sections/CoworkingSection";
+import { InstagramSection } from "@/components/sections/InstagramSection";
 import { Footer } from "@/components/sections/Footer";
 
 const Index = () => {
@@ -19,6 +20,7 @@ const Index = () => {
       <MenuSection />
       <EventsSection />
       <CoworkingSection />
+      <InstagramSection />
       <Footer />
     </main>
   );
