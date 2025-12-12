@@ -28,7 +28,7 @@ Meets Community</h2>
           <div className="relative">
             <ScrollReveal direction="right" delay={0.2}>
               <div className="relative">
-                <img alt="TILE café interior" className="w-full h-80 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/9cc3b0c1-2d69-454b-9798-deb115cd0012.png" />
+                <img alt="TILE café interior" className="w-full h-80 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/28b9a067-88b3-4f95-a4a8-b16f92bd05c1.jpg" />
               </div>
             </ScrollReveal>
 
