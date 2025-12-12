@@ -7,8 +7,12 @@ import tileSpace4 from "@/assets/tile-space-4.jpg";
 import tileSpace5 from "@/assets/tile-space-5.jpg";
 import tileSpace6 from "@/assets/tile-space-6.jpg";
 const instagramImages = [tileSpace1, tileSpace2, tileSpace3, tileSpace4, tileSpace5, tileSpace6];
-export const InstagramSection = () => {
-  return <section className="bg-secondary py-20">
+interface InstagramSectionProps {
+  className?: string;
+}
+
+export const InstagramSection = ({ className }: InstagramSectionProps) => {
+  return <section className={`bg-secondary py-20 ${className || ''}`}>
       <div className="container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-12">
