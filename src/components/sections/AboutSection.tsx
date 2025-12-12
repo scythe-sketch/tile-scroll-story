@@ -28,14 +28,14 @@ Meets Community</h2>
           <div className="relative">
             <ScrollReveal direction="right" delay={0.2}>
               <div className="relative">
-                <img src={tileSpace2} alt="TILE café interior" className="w-full h-80 object-cover rounded-3xl shadow-medium" loading="lazy" />
+                <img alt="TILE café interior" className="w-full h-80 object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/e1526af8-d3f2-4415-898b-f2ea77c9536f.png" />
               </div>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.4}>
               <div className="flex gap-4 mt-4">
-                <img src={tileSpace3} alt="Board games at TILE" className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift" loading="lazy" />
-                <img src={tileSpace4} alt="Community at TILE" className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift" loading="lazy" />
+                <img alt="Board games at TILE" className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift" loading="lazy" src="/lovable-uploads/010758b5-0bc7-4e07-8b16-38644d341783.png" />
+                <img alt="Community at TILE" className="w-1/2 h-48 object-cover rounded-2xl shadow-soft hover-lift" loading="lazy" src="/lovable-uploads/685ebe2a-37b8-4566-893d-3c060a2aaa86.jpg" />
               </div>
             </ScrollReveal>
           </div>
