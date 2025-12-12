@@ -1,6 +1,6 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { Users, Sofa, Car, Zap, Smile } from "lucide-react";
+import { Sofa, Sun, Car, Wifi, Zap, Smile } from "lucide-react";
 import tileSpace5 from "@/assets/tile-space-5.jpg";
 import tileSpace6 from "@/assets/tile-space-6.jpg";
 import tileSpace7 from "@/assets/tile-space-7.jpg";
