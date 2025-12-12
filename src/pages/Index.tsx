@@ -8,10 +8,8 @@ import { EventsSection } from "@/components/sections/EventsSection";
 import { CoworkingSection } from "@/components/sections/CoworkingSection";
 import { InstagramSection } from "@/components/sections/InstagramSection";
 import { Footer } from "@/components/sections/Footer";
-
 const Index = () => {
-  return (
-    <main className="overflow-x-hidden">
+  return <main className="overflow-x-hidden">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -20,10 +18,8 @@ const Index = () => {
       <MenuSection />
       <EventsSection />
       <CoworkingSection />
-      <InstagramSection />
+      <InstagramSection className="bg-accent" />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;
