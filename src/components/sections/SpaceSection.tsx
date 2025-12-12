@@ -1,25 +1,23 @@
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
-import { Sofa, Sun, Car, Wifi, Eye, Heart, Leaf, Coffee, Laptop, Dices, Battery, AlertCircle } from "lucide-react";
-import tileSpace5 from "@/assets/tile-space-5.jpg";
-import tileSpace6 from "@/assets/tile-space-6.jpg";
-import tileSpace7 from "@/assets/tile-space-7.jpg";
+import { UtensilsCrossed, Dices, Car, Activity, Eye, Heart, Leaf, Coffee, Laptop } from "lucide-react";
+import tileCafeInterior from "@/assets/tile-cafe-interior.png";
 const stats = [{
-  icon: Sofa,
-  value: "1,200",
-  label: "sq ft open space"
+  icon: UtensilsCrossed,
+  value: "Fresh",
+  label: "dishes and specialty coffee"
 }, {
-  icon: Sun,
-  value: "High",
-  label: "ceilings & natural light"
+  icon: Dices,
+  value: "Unlimited",
+  label: "board games and all-day access"
 }, {
   icon: Car,
   value: "Free",
   label: "onsite parking"
 }, {
-  icon: Wifi,
-  value: "Fast",
-  label: "free WiFi"
+  icon: Activity,
+  value: "Active",
+  label: "padel courts and Pilates studio"
 }];
 const highlights = [{
   icon: Eye,
@@ -43,7 +41,7 @@ const highlights = [{
 export const SpaceSection = () => {
   return <section id="space" className="relative">
       {/* Parallax Header */}
-      <ParallaxSection backgroundImage={tileSpace5} overlayOpacity={0.5} className="py-32 md:py-48">
+      <ParallaxSection backgroundImage={tileCafeInterior} overlayOpacity={0.5} className="py-32 md:py-48">
         <div className="container mx-auto px-6 text-center">
           <ScrollReveal>
             <span className="text-sm font-medium text-primary-foreground/80 uppercase tracking-widest">
