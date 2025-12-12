@@ -63,7 +63,7 @@ export const CoworkingSection = () => {
           {/* Image */}
           <ScrollReveal direction="right" delay={0.2}>
             <div className="relative">
-              <img alt="Coworking at TILE" className="w-full h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/105a5e62-bf53-45ba-a93c-15ab85e2c6a0.jpg" />
+              <img alt="Coworking at TILE" className="w-full h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" src="/lovable-uploads/971fb14b-28f1-44d7-a99e-c28f5f4bc2e1.jpg" />
               <motion.div animate={{
               y: [0, -10, 0]
             }} transition={{

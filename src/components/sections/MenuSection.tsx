@@ -165,12 +165,7 @@ export const MenuSection = () => {
           }}>
               <img src={activeTab === "drinks" ? coffeeDrinks : foodPlates} alt={`${activeTab} at TILE`} className="w-full h-[400px] md:h-[500px] object-cover rounded-3xl shadow-medium" loading="lazy" />
               <div className="mt-6 p-6 bg-card rounded-2xl">
-                <p className="text-sm text-muted-foreground">
-                <span className="font-medium text-primary">Cover charge:</span> AED 30 redeemable on food & drink per person
-                </p>
-              </div><div className="mt-6 p-6 bg-card rounded-2xl">
-                <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-primary">Cover charge:</span> AED 30 redeemable on food & drink per person
+                <p className="text-sm text-muted-foreground">Fresh ingredients. Honest flavours. Made to keep you going.<span className="font-medium text-primary">Cover charge:</span> AED 30 redeemable on food & drink per person
                 </p>
               </div>
             </motion.div>
