@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-cafe.jpg";
+import heroImage from "@/assets/hero-cafe.png";
 export const HeroSection = () => {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector("#about");
