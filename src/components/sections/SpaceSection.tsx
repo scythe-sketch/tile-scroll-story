@@ -51,7 +51,7 @@ export const SpaceSection = () => {
               Designed for Connection
             </h2>
             <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto">
-              A bright, spacious café with high ceilings, natural light, dedicated seating, and a calm creative atmosphere — perfect for solo work, group projects, or meetings.
+              A bright, welcoming café with generous seating, board games on hand, thoughtfully crafted food, and drinks worth staying for. Come to work, play, or simply switch off.
             </p>
           </ScrollReveal>
         </div>
