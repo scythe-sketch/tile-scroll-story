@@ -12,7 +12,7 @@ interface InstagramSectionProps {
 }
 
 export const InstagramSection = ({ className }: InstagramSectionProps) => {
-  return <section className={`bg-secondary py-20 ${className || ''}`}>
+  return <section className={`bg-matcha/20 py-20 ${className || ''}`}>
       <div className="container mx-auto px-6">
         <ScrollReveal>
           <div className="text-center mb-12">
