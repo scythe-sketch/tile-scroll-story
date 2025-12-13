@@ -14,14 +14,19 @@ export const HeroSection = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <motion.img initial={{
-        scale: 1.1
-      }} animate={{
-        scale: 1
-      }} transition={{
-        duration: 1.5,
-        ease: "easeOut"
-      }} src={heroImage} alt="TILE Café Interior" className="w-full h-full object-cover" />
+        <motion.img 
+          initial={{ scale: 1 }} 
+          animate={{ scale: 1.15 }} 
+          transition={{
+            duration: 20,
+            ease: "linear",
+            repeat: Infinity,
+            repeatType: "reverse"
+          }} 
+          src={heroImage} 
+          alt="TILE Café Interior" 
+          className="w-full h-full object-cover" 
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-foreground/60 via-foreground/40 to-foreground/70" />
       </div>
 
