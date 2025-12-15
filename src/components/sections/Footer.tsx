@@ -29,6 +29,12 @@ export const Footer = () => {
       });
     }
   };
+
+  const googleMapsUrl =
+    "https://www.google.com/maps?q=347R+6J+tile+Board+Game+Cafe+-+Al+Thanyah+Fifth+-+Jumeirah+Heights+-+Dubai&ftid=0x3e5f6d003ab61c43:0x27eb4bcc1d7fbe4a&entry=gps&shh=CAE&lucs=,94297699,94275415,94284505,94231188,94280568,47071704,94218641,94282134,94286869&g_ep=CAISEjI1LjQ5LjkuODM4ODk5MTgzMBgAIIgnKlEsOTQyOTc2OTksOTQyNzU0MTUsOTQyODQ1MDUsOTQyMzExODgsOTQyODA1NjgsNDcwNzE3MDQsOTQyMTg2NDEsOTQyODIxMzQsOTQyODY4NjlCAkFF&skid=7051fafe-10eb-447d-9a17-9a79342d1f10&g_st=ia";
+
+  const googleMapsEmbedUrl =
+    "https://www.google.com/maps?output=embed&q=347R+6J+TILE+Board+Game+Cafe,+Jumeirah+Heights,+Dubai";
   return <footer id="visit" className="bg-foreground text-primary-foreground">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-20">
@@ -54,11 +60,36 @@ export const Footer = () => {
                 </p>
               </div>
               {/* Google Maps Embed */}
-              <div className="mt-4 rounded-xl overflow-hidden h-40">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6893!2d55.1494!3d25.0683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cac12e16a41%3A0x54a396af8a12ebb8!2sTile%20Board%20Game%20Cafe!5e0!3m2!1sen!2sae!4v1702400000000!5m2!1sen!2sae" width="100%" height="100%" style={{
-                border: 0
-              }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="TILE Board Game Cafe Location" className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
+              <div className="mt-4 rounded-xl overflow-hidden h-40 relative">
+                <iframe
+                  src={googleMapsEmbedUrl}
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="TILE Board Game Cafe Location Map"
+                  className="grayscale opacity-80 transition-all duration-500"
+                />
+                {/* Click overlay to open the exact location in Google Maps */}
+                <a
+                  href={googleMapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute inset-0"
+                  aria-label="Open TILE Board Game Cafe in Google Maps"
+                >
+                  <span className="sr-only">Open in Google Maps</span>
+                </a>
               </div>
+              <a
+                href={googleMapsUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex mt-3 text-sm font-medium text-matcha hover:underline"
+              >
+                Open in Google Maps
+              </a>
             </div>
           </ScrollReveal>
 
