@@ -55,7 +55,7 @@ export const Footer = () => {
               </div>
               {/* Google Maps Embed */}
               <div className="mt-4 rounded-xl overflow-hidden h-40">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.7095!2d55.1358!3d25.0681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6b12c8b2fc83%3A0x97d574c3a1b4e3a2!2sTile%20Board%20Game%20Cafe!5e0!3m2!1sen!2sae!4v1702200000000!5m2!1sen!2sae" width="100%" height="100%" style={{
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.6893!2d55.1494!3d25.0683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6cac12e16a41%3A0x54a396af8a12ebb8!2sTile%20Board%20Game%20Cafe!5e0!3m2!1sen!2sae!4v1702400000000!5m2!1sen!2sae" width="100%" height="100%" style={{
                 border: 0
               }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade" title="TILE Board Game Cafe Location" className="grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500" />
               </div>
