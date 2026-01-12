@@ -9,6 +9,7 @@ import menuDesserts from "@/assets/menu-desserts.jpg";
 
 const menuImages: Record<MenuTab, string> = {
   breakfast: menuBreakfast,
+  sandwiches: menuMains,
   mains: menuMains,
   drinks: menuDrinks,
   desserts: menuDesserts,
@@ -16,6 +17,10 @@ const menuImages: Record<MenuTab, string> = {
 const menuTabs = [{
   id: "breakfast",
   label: "All-Day Breakfast",
+  icon: UtensilsCrossed
+}, {
+  id: "sandwiches",
+  label: "Sandwiches & Wraps",
   icon: UtensilsCrossed
 }, {
   id: "mains",
@@ -56,18 +61,25 @@ const menuItems = {
     name: "Açai Bowl",
     description: "Açai blend with fruits and nuts"
   }],
-  mains: [{
-    name: "Triple Grilled Cheese Panini",
-    description: "Three cheese blend, perfectly grilled"
+  sandwiches: [{
+    name: "3 Cheese Grilled Panini",
+    description: "Three cheese blend, perfectly toasted"
   }, {
     name: "The Bombay Special",
     description: "Spiced sandwich, Mumbai street food inspired"
   }, {
-    name: "Grilled Veggies Sandwich",
+    name: "Grilled Veggies Panini",
     description: "Fresh grilled vegetables on artisan bread"
   }, {
+    name: "Garden Veggie Wrap",
+    description: "Crisp garden vegetables in a soft tortilla"
+  }, {
+    name: "Avocado Halloumi Wrap",
+    description: "Creamy avocado with grilled halloumi"
+  }],
+  mains: [{
     name: "Beetroot & Strawberry Salad",
-    description: "Fresh beets with strawberries"
+    description: "Fresh beets with strawberries and greens"
   }, {
     name: "Quinoa Edamame Salad",
     description: "Protein-rich quinoa with edamame"
@@ -80,6 +92,15 @@ const menuItems = {
   }, {
     name: "Caesar Salad",
     description: "Romaine, croutons, parmesan, caesar dressing"
+  }, {
+    name: "Margherita Pizza",
+    description: "Classic tomato, mozzarella, and fresh basil"
+  }, {
+    name: "Penne Arrabiata",
+    description: "Spicy tomato sauce with garlic and chili"
+  }, {
+    name: "Spaghetti Aglio e Olio",
+    description: "Garlic, olive oil, and a hint of chili"
   }],
   drinks: [{
     name: "Iced Americano",
