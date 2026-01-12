@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { Coffee, UtensilsCrossed, Cake } from "lucide-react";
+import { Coffee, Egg, Sandwich, Salad, Cake } from "lucide-react";
 import menuBreakfast from "@/assets/food-games-table.jpg";
 import menuMains from "@/assets/menu-mains.jpg";
 import menuDrinks from "@/assets/menu-drinks.jpg";
@@ -17,15 +17,15 @@ const menuImages: Record<MenuTab, string> = {
 const menuTabs = [{
   id: "breakfast",
   label: "All-Day Breakfast",
-  icon: UtensilsCrossed
+  icon: Egg
 }, {
   id: "sandwiches",
   label: "Sandwiches & Wraps",
-  icon: UtensilsCrossed
+  icon: Sandwich
 }, {
   id: "mains",
   label: "Mains & Salads",
-  icon: UtensilsCrossed
+  icon: Salad
 }, {
   id: "drinks",
   label: "Drinks",
