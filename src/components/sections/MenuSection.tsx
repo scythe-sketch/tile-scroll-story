@@ -103,23 +103,20 @@ const menuItems = {
     description: "Garlic, olive oil, and a hint of chili"
   }],
   drinks: [{
-    name: "Iced Americano",
-    description: "Bold espresso over ice"
+    name: "Coffee",
+    description: "Espresso & milk-based classics · Signature lattes · Iced coffee selections · Specialty brews"
   }, {
-    name: "Iced Frappe",
-    description: "Blended iced coffee drink"
+    name: "Tea",
+    description: "Premium loose-leaf teas · Herbal & fruit infusions · Hot and iced options"
   }, {
-    name: "Iced Mocha Frappe",
-    description: "Chocolate and coffee blended"
+    name: "Matcha",
+    description: "Ceremonial-style matcha drinks · Signature matcha creations · Cloud-style beverages"
   }, {
-    name: "Iced Spanish Latte",
-    description: "Sweetened condensed milk latte"
+    name: "Smoothies & Shakes",
+    description: "Fresh fruit smoothies · Protein shakes · Blended specialty drinks"
   }, {
-    name: "Iced Matcha Latte",
-    description: "Ceremonial grade matcha, oat milk"
-  }, {
-    name: "Pour Over",
-    description: "Single origin, rotating selection"
+    name: "Fresh & Refreshing",
+    description: "House-brewed iced tea · Freshly prepared juices · Citrus & mint refreshers"
   }],
   desserts: [{
     name: "Double Chocolate Cookie",
