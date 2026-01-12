@@ -102,19 +102,31 @@ const menuItems = {
   }],
   desserts: [{
     name: "Double Chocolate Cookie",
-    description: "Rich, chewy chocolate cookie"
+    description: "Rich, chewy cookie loaded with chocolate chips"
   }, {
-    name: "Oatmeal Raisin Cookie",
-    description: "Classic oat and raisin"
+    name: "Chocolate Fudge Cup",
+    description: "Decadent individual chocolate fudge portion"
   }, {
-    name: "Double Chocolate Fudge Brownie",
-    description: "Dense, fudgy brownie"
+    name: "Banana Walnut Choco Slice",
+    description: "Moist banana bread with walnuts and chocolate"
   }, {
-    name: "Chocolate Fudge Cups",
-    description: "Individual chocolate fudge portions"
+    name: "Marble Cake Slice",
+    description: "Classic swirl of vanilla and chocolate"
   }, {
-    name: "Banana Walnut Choco Loaf",
-    description: "Moist banana bread with chocolate and walnuts"
+    name: "Classic Tiramisu",
+    description: "Traditional Italian coffee-soaked dessert"
+  }, {
+    name: "Oreo Cheesecake",
+    description: "Creamy cheesecake with Oreo cookie crumble"
+  }, {
+    name: "Mixed Berry Cheesecake",
+    description: "Light cheesecake topped with fresh berries"
+  }, {
+    name: "Lotus Cheesecake",
+    description: "Biscoff-infused creamy cheesecake"
+  }, {
+    name: "Affogato",
+    description: "Espresso poured over vanilla gelato"
   }]
 };
 type MenuTab = keyof typeof menuItems;
