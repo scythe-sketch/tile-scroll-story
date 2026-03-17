@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import {
-  Egg, Salad, Sandwich, UtensilsCrossed, Popcorn,
+  Salad, Sandwich, UtensilsCrossed, Popcorn,
   Coffee, Sparkles, IceCreamCone, Cake, CupSoda,
   Milk, Leaf, Blend, GlassWater
 } from "lucide-react";
@@ -14,11 +14,16 @@ interface MenuItem {
   description?: string;
 }
 
+interface MenuSubSection {
+  subheading?: string;
+  items: MenuItem[];
+}
+
 interface MenuCategory {
   id: string;
   label: string;
   icon: React.ElementType;
-  items: MenuItem[];
+  sections: MenuSubSection[];
   note?: string;
 }
 
@@ -26,203 +31,236 @@ const menuCategories: MenuCategory[] = [
   {
     id: "breakfast",
     label: "all day breakfast",
-    icon: Egg,
-    items: [
-      { name: "banana cinnamon oats", description: "warm oats with banana and cinnamon" },
-      { name: "chia bowl with fruits & nuts", description: "chia pudding with fresh toppings" },
-      { name: "pancakes with fruits", description: "fluffy pancakes with fresh fruits" },
-      { name: "strawberry nutella crêpe", description: "sweet crêpe with strawberry and nutella" },
-      { name: "spinach & ricotta crêpe", description: "savoury crêpe with creamy filling" },
-      { name: "mushroom cream crêpe", description: "rich mushroom and cream filling" },
-      { name: "avocado on toast", description: "smashed avocado on toasted bread" },
-      { name: "tofu scramble on toast", description: "plant-based scrambled tofu on toast" },
-      { name: "wild mushrooms on toast", description: "sautéed mushrooms on toast" },
-      { name: "açaí bowl with fruits & nuts", description: "refreshing açaí with toppings" },
-      { name: "strawberry oreo mini pancakes", description: "mini pancakes with oreo and strawberry" },
-      { name: "butter croissant", description: "fresh, flaky classic" },
-    ],
+    icon: Coffee,
+    sections: [{
+      items: [
+        { name: "banana cinnamon oats", description: "warm oats with banana and cinnamon" },
+        { name: "chia bowl with fruits & nuts", description: "chia pudding with fresh toppings" },
+        { name: "pancakes with fruits", description: "fluffy pancakes with fresh fruits" },
+        { name: "strawberry nutella crêpe", description: "sweet crêpe with strawberry and nutella" },
+        { name: "spinach & ricotta crêpe", description: "savoury crêpe with creamy filling" },
+        { name: "mushroom cream crêpe", description: "rich mushroom and cream filling" },
+        { name: "avocado on toast", description: "smashed avocado on toasted bread" },
+        { name: "tofu scramble on toast", description: "plant-based scrambled tofu on toast" },
+        { name: "wild mushrooms on toast", description: "sautéed mushrooms on toast" },
+        { name: "açaí bowl with fruits & nuts", description: "refreshing açaí with toppings" },
+        { name: "strawberry oreo mini pancakes", description: "mini pancakes with oreo and strawberry" },
+        { name: "butter croissant", description: "fresh, flaky classic" },
+      ],
+    }],
   },
   {
     id: "salads",
     label: "salads",
     icon: Salad,
-    items: [
-      { name: "beetroot & strawberry salad", description: "fresh beetroot with sweet strawberry" },
-      { name: "quinoa edamame salad", description: "protein-rich quinoa and edamame" },
-      { name: "pasta salad", description: "light pasta with fresh vegetables" },
-      { name: "greek salad", description: "feta, olives, and fresh vegetables" },
-      { name: "caesar salad", description: "crisp lettuce with creamy dressing" },
-      { name: "mixed bean salad", description: "hearty mixed beans and herbs" },
-      { name: "sweet potato salad", description: "roasted sweet potato and greens" },
-      { name: "super food salad", description: "nutrient-packed healthy mix" },
-    ],
+    sections: [{
+      items: [
+        { name: "beetroot & strawberry salad", description: "fresh beetroot with sweet strawberry" },
+        { name: "quinoa edamame salad", description: "protein-rich quinoa and edamame" },
+        { name: "pasta salad", description: "light pasta with fresh vegetables" },
+        { name: "greek salad", description: "feta, olives, and fresh vegetables" },
+        { name: "caesar salad", description: "crisp lettuce with creamy dressing" },
+        { name: "mixed bean salad", description: "hearty mixed beans and herbs" },
+        { name: "sweet potato salad", description: "roasted sweet potato and greens" },
+        { name: "super food salad", description: "nutrient-packed healthy mix" },
+      ],
+    }],
   },
   {
     id: "sandwiches",
     label: "sandwiches & wraps",
     icon: Sandwich,
-    items: [
-      { name: "pesto caprese panini", description: "mozzarella, tomato, and pesto" },
-      { name: "cheese grilled panini", description: "melted cheese in toasted bread" },
-      { name: "the bombay special", description: "spiced indian-style sandwich" },
-      { name: "grilled veggies panini", description: "roasted vegetables in panini" },
-      { name: "avocado halloumi wrap", description: "creamy avocado with grilled halloumi" },
-      { name: "garden veggie wrap", description: "fresh vegetables in soft wrap" },
-      { name: "teriyaki paneer wrap", description: "paneer with sweet teriyaki glaze" },
-    ],
+    sections: [{
+      items: [
+        { name: "pesto caprese panini", description: "mozzarella, tomato, and pesto" },
+        { name: "cheese grilled panini", description: "melted cheese in toasted bread" },
+        { name: "the bombay special", description: "spiced indian-style sandwich" },
+        { name: "grilled veggies panini", description: "roasted vegetables in panini" },
+        { name: "avocado halloumi wrap", description: "creamy avocado with grilled halloumi" },
+        { name: "garden veggie wrap", description: "fresh vegetables in soft wrap" },
+        { name: "teriyaki paneer wrap", description: "paneer with sweet teriyaki glaze" },
+      ],
+    }],
     note: "all wraps served with potato wedges",
   },
   {
     id: "mains",
     label: "mains",
     icon: UtensilsCrossed,
-    items: [
-      { name: "margherita pizza" },
-      { name: "penne arrabiata" },
-      { name: "spaghetti aglio e olio" },
-      { name: "pesto pasta" },
-    ],
+    sections: [{
+      items: [
+        { name: "margherita pizza", description: "classic tomato and mozzarella" },
+        { name: "penne arrabiata", description: "spicy tomato sauce pasta" },
+        { name: "spaghetti aglio e olio", description: "garlic and olive oil spaghetti" },
+        { name: "pesto pasta", description: "fresh basil pesto with pasta" },
+      ],
+    }],
   },
   {
     id: "starters",
     label: "starters & sides",
     icon: Popcorn,
-    items: [
-      { name: "spicy salted edamame" },
-      { name: "nachos" },
-      { name: "roasted potato wedges" },
-      { name: "french fries" },
-      { name: "garlic mozzarella bread" },
-      { name: "butter popcorn" },
-      { name: "cheese popcorn" },
-    ],
+    sections: [{
+      items: [
+        { name: "spicy salted edamame", description: "steamed with chilli salt" },
+        { name: "nachos", description: "loaded with salsa and cheese" },
+        { name: "roasted potato wedges", description: "crispy seasoned wedges" },
+        { name: "french fries", description: "golden and crispy" },
+        { name: "garlic mozzarella bread", description: "cheesy garlic flatbread" },
+        { name: "butter popcorn", description: "classic buttery crunch" },
+        { name: "cheese popcorn", description: "cheesy flavoured popcorn" },
+      ],
+    }],
+  },
+  {
+    id: "matcha",
+    label: "matcha",
+    icon: Sparkles,
+    sections: [{
+      items: [
+        { name: "matcha latte", description: "smooth ceremonial grade matcha" },
+        { name: "cloud matcha", description: "fluffy cloud-topped matcha" },
+        { name: "iced matcha latte", description: "chilled matcha over ice" },
+        { name: "mango matcha iced latte", description: "tropical mango with matcha" },
+        { name: "strawberry matcha iced latte", description: "sweet strawberry meets matcha" },
+      ],
+    }],
+  },
+  {
+    id: "iced-specialty",
+    label: "iced & specialty coffee",
+    icon: IceCreamCone,
+    sections: [{
+      items: [
+        { name: "iced americano", description: "bold espresso over ice" },
+        { name: "iced cappuccino", description: "frothy cappuccino chilled" },
+        { name: "iced mocha", description: "chocolate espresso on ice" },
+        { name: "iced latte", description: "smooth latte over ice" },
+        { name: "iced spanish latte", description: "sweetened condensed milk latte" },
+        { name: "coconut iced americano", description: "coconut-infused cold espresso" },
+        { name: "iced vanilla latte", description: "vanilla bean iced latte" },
+      ],
+    }],
   },
   {
     id: "coffee",
     label: "coffee",
     icon: Coffee,
-    items: [
-      { name: "espresso" },
-      { name: "americano" },
-      { name: "macchiato" },
-      { name: "cortado" },
-      { name: "cappuccino" },
-      { name: "café latte" },
-      { name: "spanish latte" },
-      { name: "café mocha" },
-      { name: "flat white" },
-      { name: "v60" },
-      { name: "hot chocolate" },
-    ],
-  },
-  {
-    id: "matcha",
-    label: "matcha & speciality",
-    icon: Sparkles,
-    items: [
-      { name: "matcha latte" },
-      { name: "cloud matcha" },
-      { name: "iced matcha latte" },
-      { name: "mango matcha iced latte" },
-      { name: "strawberry matcha iced latte" },
-    ],
-  },
-  {
-    id: "iced-coffee",
-    label: "iced coffee",
-    icon: IceCreamCone,
-    items: [
-      { name: "iced americano" },
-      { name: "iced cappuccino" },
-      { name: "iced mocha" },
-      { name: "iced latte" },
-      { name: "iced spanish latte" },
-      { name: "coconut iced americano" },
-      { name: "iced vanilla latte" },
-    ],
+    sections: [{
+      items: [
+        { name: "espresso", description: "rich single shot" },
+        { name: "americano", description: "smooth and bold" },
+        { name: "macchiato", description: "espresso with a dash of milk" },
+        { name: "cortado", description: "equal parts espresso and milk" },
+        { name: "cappuccino", description: "frothy and creamy" },
+        { name: "café latte", description: "smooth steamed milk espresso" },
+        { name: "spanish latte", description: "sweetened condensed milk blend" },
+        { name: "café mocha", description: "chocolate meets espresso" },
+        { name: "flat white", description: "velvety microfoam espresso" },
+        { name: "v60", description: "hand-poured filter coffee" },
+        { name: "hot chocolate", description: "rich and warming" },
+      ],
+    }],
   },
   {
     id: "desserts",
     label: "desserts",
     icon: Cake,
-    items: [
-      { name: "double chocolate cookie", description: "soft cookie with chocolate chunks" },
-      { name: "chocolate fudge cup", description: "rich chocolate dessert" },
-      { name: "banana walnut choco slice", description: "moist banana chocolate cake" },
-      { name: "marble cake slice", description: "vanilla and chocolate swirl" },
-      { name: "chocolate cake", description: "classic rich chocolate cake" },
-      { name: "classic tiramisu", description: "italian coffee dessert" },
-      { name: "oreo cheesecake" },
-      { name: "very berry cheesecake" },
-      { name: "lotus cheesecake" },
-      { name: "affogato", description: "espresso over vanilla ice cream" },
-      { name: "vanilla ice cream" },
-      { name: "double chocolate ice cream" },
-    ],
+    sections: [{
+      items: [
+        { name: "double chocolate cookie", description: "soft cookie with chocolate chunks" },
+        { name: "chocolate fudge cup", description: "rich chocolate dessert" },
+        { name: "banana walnut choco slice", description: "moist banana chocolate cake" },
+        { name: "marble cake slice", description: "vanilla and chocolate swirl" },
+        { name: "chocolate cake", description: "classic rich chocolate cake" },
+        { name: "classic tiramisu", description: "italian coffee dessert" },
+        { name: "oreo cheesecake", description: "cookies and cream cheesecake" },
+        { name: "very berry cheesecake", description: "mixed berry topped cheesecake" },
+        { name: "lotus cheesecake", description: "biscoff caramel cheesecake" },
+        { name: "affogato", description: "espresso over vanilla ice cream" },
+        { name: "vanilla ice cream", description: "classic creamy scoop" },
+        { name: "double chocolate ice cream", description: "indulgent chocolate scoop" },
+      ],
+    }],
   },
   {
     id: "shakes",
     label: "milkshakes & protein",
     icon: Milk,
-    items: [
-      { name: "coffee date vanilla protein", description: "protein shake with coffee and dates" },
-      { name: "strawberry vanilla protein", description: "fruity protein blend" },
-      { name: "banana peanut butter protein", description: "creamy and rich" },
-      { name: "double chocolate shake" },
-      { name: "fresh strawberry shake" },
-      { name: "banana cream shake" },
-    ],
+    sections: [{
+      items: [
+        { name: "coffee date vanilla protein", description: "protein shake with coffee and dates" },
+        { name: "strawberry vanilla protein", description: "fruity protein blend" },
+        { name: "banana peanut butter protein", description: "creamy and rich" },
+        { name: "double chocolate shake", description: "thick chocolate milkshake" },
+        { name: "fresh strawberry shake", description: "blended fresh strawberries" },
+        { name: "banana cream shake", description: "smooth banana and cream" },
+      ],
+    }],
   },
   {
     id: "teas",
     label: "teas",
     icon: Leaf,
-    items: [
-      { name: "masala chai" },
-      { name: "saffron chai" },
-      { name: "ginger cinnamon honey" },
-      { name: "avantcha moroccan mint" },
-      { name: "avantcha jasmine" },
-      { name: "avantcha green" },
-      { name: "avantcha chamomile" },
-      { name: "avantcha peach paradise" },
-      { name: "avantcha singapore surprise" },
-      { name: "avantcha royal earl grey" },
+    sections: [
+      {
+        items: [
+          { name: "masala chai", description: "spiced indian tea blend" },
+          { name: "saffron chai", description: "aromatic saffron-infused chai" },
+          { name: "ginger cinnamon honey", description: "warming spiced herbal tea" },
+          { name: "peach paradise", description: "sweet peach-infused tea" },
+          { name: "singapore surprise", description: "tropical spiced tea blend" },
+          { name: "royal earl grey", description: "classic bergamot black tea" },
+        ],
+      },
+      {
+        subheading: "avantcha collection",
+        items: [
+          { name: "moroccan mint", description: "refreshing north african mint" },
+          { name: "jasmine", description: "fragrant jasmine green tea" },
+          { name: "green", description: "pure and delicate green tea" },
+          { name: "chamomile", description: "calming floral herbal tea" },
+        ],
+      },
     ],
   },
   {
     id: "smoothies",
     label: "smoothies & frappes",
     icon: Blend,
-    items: [
-      { name: "blue tilebreaker" },
-      { name: "berry mania" },
-      { name: "tropical fruits" },
-      { name: "charcoal magic" },
-      { name: "detox green" },
-      { name: "matcha glow" },
-      { name: "icy matcha frappe" },
-      { name: "iced mocha frappe" },
-      { name: "caramel coffee frappe" },
-      { name: "matcha vanilla frappe" },
-      { name: "tile cold coffee" },
-    ],
+    sections: [{
+      items: [
+        { name: "blue tilebreaker", description: "blue spirulina, mango, banana, raspberry, coconut" },
+        { name: "berry mania", description: "raspberry, blueberry, banana" },
+        { name: "tropical fruits", description: "mango, passion fruit, pineapple" },
+        { name: "charcoal magic", description: "blackcurrant, cherry, blueberry, blackberry, activated charcoal" },
+        { name: "detox green", description: "broccoli, spinach, celery, mango, banana, pineapple" },
+        { name: "matcha glow", description: "matcha, banana, mango, kale, coconut" },
+        { name: "icy matcha frappe", description: "matcha, vanilla ice cream" },
+        { name: "iced mocha frappe", description: "espresso, chocolate, ice cream" },
+        { name: "caramel coffee frappe", description: "cold brew coffee, caramel, vanilla, ice cream" },
+        { name: "matcha vanilla frappe", description: "matcha blended with vanilla cream" },
+        { name: "tile cold coffee", description: "signature cold brew blend" },
+      ],
+    }],
   },
   {
     id: "refreshers",
     label: "refreshers & juices",
     icon: GlassWater,
-    items: [
-      { name: "house brewed iced tea" },
-      { name: "classic mojito" },
-      { name: "strawberry mojito" },
-      { name: "matcha mint mojito" },
-      { name: "lemon & mint juice" },
-      { name: "orange juice" },
-      { name: "watermelon juice" },
-      { name: "carrot juice" },
-      { name: "fresh coconut water" },
-    ],
+    sections: [{
+      items: [
+        { name: "house brewed iced tea", description: "freshly brewed and chilled" },
+        { name: "classic mojito", description: "lime, mint, and soda" },
+        { name: "strawberry mojito", description: "strawberry twist on a classic" },
+        { name: "matcha mint mojito", description: "matcha with fresh mint" },
+        { name: "lemon & mint juice", description: "zesty and refreshing" },
+        { name: "orange juice", description: "freshly squeezed orange" },
+        { name: "watermelon juice", description: "sweet and hydrating" },
+        { name: "carrot juice", description: "fresh cold-pressed carrot" },
+        { name: "fresh coconut water", description: "natural and refreshing" },
+      ],
+    }],
   },
 ];
 
@@ -231,8 +269,15 @@ export const MenuSection = () => {
   const activeCategory = menuCategories.find((c) => c.id === activeTab)!;
 
   return (
-    <section id="menu" className="py-24 md:py-32 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="menu" className="py-24 md:py-32 bg-gradient-section relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sage-light/20 rounded-full blur-3xl" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
           <ScrollReveal>
             <span className="text-sm font-medium text-primary uppercase tracking-widest">
@@ -250,7 +295,7 @@ export const MenuSection = () => {
         {/* Tab Switcher */}
         <ScrollReveal>
           <div className="flex justify-center mb-14">
-            <div className="inline-flex flex-wrap justify-center gap-1.5 bg-secondary/40 p-1.5 rounded-2xl max-w-4xl">
+            <div className="inline-flex flex-wrap justify-center gap-1.5 bg-card/80 backdrop-blur-sm border border-border/50 p-2 rounded-2xl max-w-4xl shadow-soft">
               {menuCategories.map((cat) => (
                 <button
                   key={cat.id}
@@ -264,7 +309,7 @@ export const MenuSection = () => {
                   {activeTab === cat.id && (
                     <motion.div
                       layoutId="activeMenuTab"
-                      className="absolute inset-0 bg-primary rounded-xl"
+                      className="absolute inset-0 bg-primary rounded-xl shadow-medium"
                       transition={{ type: "spring", stiffness: 400, damping: 30 }}
                     />
                   )}
@@ -292,26 +337,39 @@ export const MenuSection = () => {
               {activeCategory.label}
             </h3>
 
-            <div className="space-y-1">
-              {activeCategory.items.map((item, index) => (
-                <motion.div
-                  key={item.name}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: index * 0.03 }}
-                  className="group py-3 px-4 rounded-xl hover:bg-card transition-colors duration-200"
-                >
-                  <h4 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors lowercase">
-                    {item.name}
-                  </h4>
-                  {item.description && (
-                    <p className="text-muted-foreground text-sm mt-0.5 lowercase">
-                      {item.description}
-                    </p>
-                  )}
-                </motion.div>
-              ))}
-            </div>
+            {activeCategory.sections.map((section, sIdx) => (
+              <div key={sIdx} className="mb-8">
+                {section.subheading && (
+                  <div className="flex items-center gap-3 mb-4 mt-6">
+                    <div className="h-px flex-1 bg-border" />
+                    <span className="text-xs font-semibold text-primary uppercase tracking-widest">
+                      {section.subheading}
+                    </span>
+                    <div className="h-px flex-1 bg-border" />
+                  </div>
+                )}
+                <div className="space-y-0.5">
+                  {section.items.map((item, index) => (
+                    <motion.div
+                      key={item.name}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: index * 0.03 }}
+                      className="group py-3 px-4 rounded-xl hover:bg-card/80 hover:shadow-soft transition-all duration-200"
+                    >
+                      <h4 className="font-display text-base font-semibold text-foreground group-hover:text-primary transition-colors lowercase">
+                        {item.name}
+                      </h4>
+                      {item.description && (
+                        <p className="text-muted-foreground text-sm mt-0.5 lowercase">
+                          {item.description}
+                        </p>
+                      )}
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            ))}
 
             {activeCategory.note && (
               <p className="text-muted-foreground text-sm text-center mt-6 italic lowercase">
