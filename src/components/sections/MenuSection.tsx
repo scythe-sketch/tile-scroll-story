@@ -269,7 +269,7 @@ export const MenuSection = () => {
   const activeCategory = menuCategories.find((c) => c.id === activeTab)!;
 
   return (
-    <section id="menu" className="py-24 md:py-32 bg-gradient-section relative overflow-hidden">
+    <section id="menu" className="py-16 md:py-20 bg-gradient-section relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
