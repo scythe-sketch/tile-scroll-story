@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
-import { Calendar, Trophy, Users, Sparkles, GraduationCap, Palette } from "lucide-react";
+import { Calendar, Trophy, Users, Sparkles, GraduationCap, Palette, Instagram } from "lucide-react";
 import gameNight from "@/assets/game-night.jpg";
 
 const events = [
