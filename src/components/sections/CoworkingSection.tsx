@@ -54,6 +54,7 @@ export const CoworkingSection = () => {
 
               <div className="space-y-4">
                 <Button variant="sage" size="lg" onClick={() => window.open("https://wa.me/971525789699", "_blank")}>
+                  <MessageCircle size={18} />
                   Book a Desk
                 </Button>
               </div>

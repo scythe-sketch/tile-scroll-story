@@ -103,6 +103,7 @@ export const EventsSection = () => {
                   window.open("https://instagram.com/tiledubai", "_blank")
                 }
               >
+                <Instagram size={18} />
                 Join Our Community
               </Button>
             </div>
