@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Wifi, Plug, Sun, Car, Clock, Coffee } from "lucide-react";
+import { Wifi, Plug, Sun, Car, Clock, Coffee, MessageCircle } from "lucide-react";
 import tileSpace3 from "@/assets/tile-space-3.jpg";
 const features = [{
   icon: Wifi,
@@ -54,6 +54,7 @@ export const CoworkingSection = () => {
 
               <div className="space-y-4">
                 <Button variant="sage" size="lg" onClick={() => window.open("https://wa.me/971525789699", "_blank")}>
+                  <MessageCircle size={18} />
                   Book a Desk
                 </Button>
               </div>

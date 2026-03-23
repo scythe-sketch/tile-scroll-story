@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ParallaxSection } from "@/components/ParallaxSection";
 import { Button } from "@/components/ui/button";
-import { Calendar, Trophy, Users, Sparkles, GraduationCap, Palette } from "lucide-react";
+import { Calendar, Trophy, Users, Sparkles, GraduationCap, Palette, Instagram } from "lucide-react";
 import gameNight from "@/assets/game-night.jpg";
 
 const events = [
@@ -103,6 +103,7 @@ export const EventsSection = () => {
                   window.open("https://instagram.com/tiledubai", "_blank")
                 }
               >
+                <Instagram size={18} />
                 Join Our Community
               </Button>
             </div>
