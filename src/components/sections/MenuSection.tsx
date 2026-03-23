@@ -295,7 +295,7 @@ export const MenuSection = () => {
         {/* Tab Switcher */}
         <ScrollReveal>
           <div className="flex justify-center mb-14">
-            <div className="inline-flex flex-wrap justify-center gap-1.5 bg-card/80 backdrop-blur-sm border border-border/50 p-2 rounded-2xl max-w-4xl shadow-soft">
+            <div className="flex flex-wrap justify-center gap-1.5 bg-card/80 backdrop-blur-sm border border-border/50 p-2 rounded-2xl max-w-5xl shadow-soft">
               {menuCategories.map((cat) => (
                 <button
                   key={cat.id}
