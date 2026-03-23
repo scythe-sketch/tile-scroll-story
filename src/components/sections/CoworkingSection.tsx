@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import { Wifi, Plug, Sun, Car, Clock, Coffee } from "lucide-react";
+import { Wifi, Plug, Sun, Car, Clock, Coffee, MessageCircle } from "lucide-react";
 import tileSpace3 from "@/assets/tile-space-3.jpg";
 const features = [{
   icon: Wifi,
